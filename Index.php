@@ -53,29 +53,28 @@ error_reporting(E_ALL ^ E_NOTICE);
 	</form>
 
 
-	<div id = "clientes1" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	  <?php
 	  	foreach ($arrayClientes as $id => $cliente):
 	  ?>
-	  <div class="panel panel-default">
-	    <div class="panel-heading" role="tab" id="heading<?php echo $id; ?>">
-	      <h4 class="panel-title">
-	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $id; ?>" aria-expanded="false" aria-controls="collapse<?php echo $id; ?>">
-	          <?php echo $cliente->cod." - ".$cliente->nome; ?>
-	        </a>
-	      </h4>
-	    </div>
-	    <div id="collapse<?php echo $id; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $id; ?>">
-      		<div class="panel-body">
-      		<?php echo "<p><strong>CPF: </strong>".$cliente->cpf."</p>"; ?>
-      		<?php echo "<p><strong>Endereço: </strong>".$cliente->endereco."</p>"; ?>
-      		<?php echo "<p><strong>Cidade: </strong>".$cliente->cidade."</p>"; ?>
-      		<?php echo "<p><strong>Telefone: </strong>".$cliente->telefone."</p>"; ?>
-
-      		</div>
-      	</div>
-      </div>
-	<?php endforeach; ?>
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="heading<?php echo $id; ?>">
+		      <h4 class="panel-title">
+		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $id; ?>" aria-expanded="false" aria-controls="collapse<?php echo $id; ?>">
+		          <?php echo $cliente->cod." - ".$cliente->nome; ?>
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapse<?php echo $id; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $id; ?>">
+	      		<div class="panel-body">
+	      		<?php echo "<p><strong>CPF: </strong>".$cliente->cpf."</p>"; ?>
+	      		<?php echo "<p><strong>Endereço: </strong>".$cliente->endereco."</p>"; ?>
+	      		<?php echo "<p><strong>Cidade: </strong>".$cliente->cidade."</p>"; ?>
+	      		<?php echo "<p><strong>Telefone: </strong>".$cliente->telefone."</p>"; ?>
+	      		</div>
+	      	</div>
+	      </div>
+		<?php endforeach; ?>
 	</div>
 
 			<!-- JQuery -->
